@@ -1,0 +1,88 @@
+#Divisible by Ten
+#Create a function that takes a list of numbers that returns the count of how many numbers in the list are divisible by 10
+def divisible_by_ten(nums):
+  count = 0
+  for num in nums:
+    if (num % 10 == 0):
+      count += 1
+  return count
+
+#Uncomment the line below when your function is done
+print(divisible_by_ten([20, 25, 30, 35, 40]))
+
+#Write your function here
+#Greetings
+def add_greetings(names):
+  new_list = []
+  for name in names:
+    new_list.append("Hello, " + name)
+  return new_list
+
+#Uncomment the line below when your function is done
+print(add_greetings(["Owen", "Max", "Sophie"]))
+
+#Delete Starting Even Numbers
+#Function should remove elements from the front of the lst until the front of the list is not even.
+def delete_starting_evens(lst):
+  while (len(lst) > 0 and lst[0] % 2 == 0):
+    lst = lst[1:]
+  return lst
+
+#Uncomment the lines below when your function is done
+print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+print(delete_starting_evens([4, 8, 10]))
+
+#Odd Indices
+#The function creates a new empty list and add every element from lst that has an odd index. The function then returns this new list.
+def odd_indices(lst):
+  new_list = []
+  for index in range(1, len(lst), 2):
+      new_list.append(lst[index])
+  return new_list
+
+#Uncomment the line below when your function is done
+print(odd_indices([4, 3, 7, 10, 11, -2]))
+
+#Exponents
+#Create a function that takes two lists as parameters. Return a new list containing every number in bases raised to every number in powers.
+def exponents(bases, powers):
+    new_lst = []
+    for base in bases:
+        for power in powers:
+            new_lst.append(base ** power)
+    return new_lst
+
+#Uncomment the line below when your function is done
+print(exponents([2, 3, 4], [1, 2, 3]))
+
+#Larger Sum
+#Create a function named larger_sum() that takes two lists of numbers as parameters named lst1 and lst2.
+def larger_sum(lst1, lst2):
+  list1_sum = 0
+  list2_sum = 0
+  for num in lst1:
+    list1_sum += num
+  for num in lst2:
+    list2_sum += num
+  if list1_sum > list2_sum:
+    return lst1
+  elif list2_sum > list1_sum:
+    return lst2
+  else:
+    return lst1
+
+#Uncomment the line below when your function is done
+#print(larger_sum([1, 9, 5], [2, 3, 7]))
+
+#Over 9000
+#Function that sums elements of a list until the sum is greater than 9000. When this happens, the function returns the sum. If the sum of all the elements is never greater than 9000, the function should return total sum of all the elements, if the list is empty, the function should return 0
+def over_nine_thousand(lst):
+  sum = 0
+  for num in lst:
+    sum += num
+    if sum > 9000:
+      break
+  return sum
+      
+#Uncomment the line below when your function is done
+print(over_nine_thousand([8000, 900, 120, 5000]))
